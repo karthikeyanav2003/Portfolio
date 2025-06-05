@@ -126,7 +126,6 @@ const Portfolio = () => {
         alert(
           `Failed to download resume: ${error.message}. Please try again or contact me at karthikeyanav2003@gmail.com. Alternatively, you can download it directly from /resume.pdf.`
         );
-        // Fallback to direct download
         window.location.href = link;
       });
   };
@@ -141,7 +140,6 @@ const Portfolio = () => {
       padding: 0,
       lineHeight: 1.6,
     },
-
     nav: {
       position: 'fixed',
       top: 0,
@@ -153,7 +151,6 @@ const Portfolio = () => {
       transition: 'all 0.3s ease',
       height: '64px',
     },
-
     navContainer: {
       maxWidth: '1280px',
       margin: '0 auto',
@@ -163,14 +160,12 @@ const Portfolio = () => {
       alignItems: 'center',
       height: '100%',
     },
-
     navLogo: {
       fontSize: '1.75rem',
       fontWeight: '700',
       color: '#ffffff',
       textDecoration: 'none',
     },
-
     navLinks: {
       display: 'flex',
       gap: '2.5rem',
@@ -191,7 +186,6 @@ const Portfolio = () => {
           ? '0 4px 12px rgba(0, 0, 0, 0.4)'
           : 'none',
     },
-
     navLink: {
       color: '#ffffff',
       textDecoration: 'none',
@@ -203,11 +197,9 @@ const Portfolio = () => {
       position: 'relative',
       width: windowWidth < 768 ? '100%' : 'auto',
     },
-
     navLinkActive: {
       color: '#8b5cf6',
     },
-
     mobileMenuButton: {
       background: 'none',
       border: 'none',
@@ -216,7 +208,6 @@ const Portfolio = () => {
       display: windowWidth < 768 ? 'block' : 'none',
       padding: '0.5rem',
     },
-
     hero: {
       minHeight: '100vh',
       display: 'flex',
@@ -228,7 +219,6 @@ const Portfolio = () => {
       overflow: 'hidden',
       paddingTop: '64px',
     },
-
     heroContent: {
       textAlign: 'center',
       zIndex: 2,
@@ -237,7 +227,6 @@ const Portfolio = () => {
       marginTop: '40px',
       animation: 'fadeInUp 1s ease-out',
     },
-
     heroPhoto: {
       width: '200px',
       height: '200px',
@@ -253,14 +242,12 @@ const Portfolio = () => {
       alignItems: 'center',
       justifyContent: 'center',
     },
-
     heroPhotoImg: {
       width: '100%',
       height: '100%',
       objectFit: 'cover',
       borderRadius: '50%',
     },
-
     heroTitle: {
       fontSize: 'clamp(3rem, 8vw, 6rem)',
       fontWeight: '800',
@@ -272,14 +259,12 @@ const Portfolio = () => {
       marginBottom: '1rem',
       textShadow: '0 4px 20px rgba(139, 92, 246, 0.3)',
     },
-
     heroSubtitle: {
       fontSize: 'clamp(1.2rem, 3vw, 1.8rem)',
       color: '#ffffff',
       marginBottom: '1rem',
       fontWeight: '400',
     },
-
     heroDescription: {
       fontSize: '1.2rem',
       color: '#d1d5db',
@@ -287,14 +272,12 @@ const Portfolio = () => {
       maxWidth: '600px',
       margin: '0 auto 3rem',
     },
-
     socialLinks: {
       display: 'flex',
       justifyContent: 'center',
       gap: '2rem',
       marginBottom: '3rem',
     },
-
     socialLink: {
       color: '#ffffff',
       transition: 'all 0.3s ease',
@@ -302,7 +285,6 @@ const Portfolio = () => {
       borderRadius: '50%',
       background: 'rgba(255, 255, 255, 0.1)',
     },
-
     ctaButton: {
       padding: '1rem 2rem',
       backgroundColor: '#8b5cf6',
@@ -316,14 +298,12 @@ const Portfolio = () => {
       textDecoration: 'none',
       display: 'inline-block',
     },
-
     section: {
       padding: '6rem 2rem',
       maxWidth: '1280px',
       margin: '0 auto',
       scrollMarginTop: '100px',
     },
-
     sectionTitle: {
       fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
       fontWeight: '700',
@@ -332,7 +312,6 @@ const Portfolio = () => {
       color: '#8b5cf6',
       position: 'relative',
     },
-
     card: {
       backgroundColor: 'rgba(31, 41, 55, 0.8)',
       border: '1px solid rgba(147, 51, 234, 0.2)',
@@ -343,7 +322,6 @@ const Portfolio = () => {
       position: 'relative',
       overflow: 'hidden',
     },
-
     aboutPhoto: {
       width: '300px',
       height: '400px',
@@ -358,79 +336,63 @@ const Portfolio = () => {
       justifyContent: 'center',
       position: 'relative',
     },
-
     aboutPhotoImg: {
       width: '100%',
       height: '100%',
       objectFit: 'cover',
     },
-
     grid: {
       display: 'grid',
       gap: '2rem',
     },
-
     gridTwoCol: {
       gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
     },
-
     gridThreeCol: {
       gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
     },
-
     gridFourCol: {
       gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
     },
-
     fadeIn: {
       opacity: 0,
       transform: 'translateY(30px)',
       transition: 'all 0.8s ease',
     },
-
     fadeInVisible: {
       opacity: 1,
       transform: 'translateY(0)',
     },
-
     slideInLeft: {
       opacity: 0,
       transform: 'translateX(-50px)',
       transition: 'all 0.8s ease',
     },
-
     slideInLeftVisible: {
       opacity: 1,
       transform: 'translateX(0)',
     },
-
     slideInRight: {
       opacity: 0,
       transform: 'translateX(50px)',
       transition: 'all 0.8s ease',
     },
-
     slideInRightVisible: {
       opacity: 1,
       transform: 'translateX(0)',
     },
-
     bgPrimary: {
       backgroundColor: '#121212',
     },
-
     bgSecondary: {
       backgroundColor: 'rgba(31, 41, 55, 0.1)',
     },
-
     textPrimary: {
       color: '#ffffff',
     },
-
     textSecondary: {
       color: '#d1d5db',
     },
-
     textAccent: {
       color: '#8b5cf6',
     },
@@ -535,6 +497,7 @@ const Portfolio = () => {
     @media (max-width: 768px) {
       .hero-title {
         font-size: 3rem !important;
+      }
       .grid {
         grid-template-columns: 1fr !important;
       }
@@ -611,6 +574,8 @@ const Portfolio = () => {
           <div style={styles.socialLinks}>
             <a
               href="https://github.com/karthikeyanav2003"
+              target="_blank"
+              rel="noopener noreferrer"
               style={styles.socialLink}
               className="social-hover"
             >
@@ -618,6 +583,8 @@ const Portfolio = () => {
             </a>
             <a
               href="https://www.linkedin.com/in/karthik-venkat-2219aa277"
+              target="_blank"
+              rel="noopener noreferrer"
               style={styles.socialLink}
               className="social-hover"
             >
@@ -625,6 +592,8 @@ const Portfolio = () => {
             </a>
             <a
               href="mailto:karthikeyanav2003@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               style={styles.socialLink}
               className="social-hover"
             >
@@ -689,7 +658,6 @@ const Portfolio = () => {
                     justifyContent: 'center',
                   }}
                   className="cta-hover"
-                  // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 >
                   <Download size={20} />
                   Download Resume
@@ -714,15 +682,9 @@ const Portfolio = () => {
                 </p>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', ...styles.textSecondary }}>
-                <p>
-                  Developed and deployed a comprehensive chronic disease detection platform using Streamlit, enhancing diagnostic accessibility for over 200+ test cases with 30% reduction in user interaction time during clinical trials.
-                </p>
-                <p>
-                  Engineered a robust diabetic retinopathy detection platform utilizing both Flask and Django frameworks, enabling flexible deployment modes and achieving over 95% model inference accuracy across various preprocessed inputs.
-                </p>
-                <p>
-                  Refactored and optimized existing project architecture, resulting in 40% improvement in model response time and 25% boost in UI responsiveness, significantly enhancing real-time usability for healthcare professionals.
-                </p>
+                <p>Developed and deployed a chronic disease detection platform using Streamlit to enhance diagnostic accessibility.</p>
+                <p>Engineered a diabetic retinopathy detection platform with Flask and Django for flexible deployment.</p>
+                <p>Refactored project architecture to optimize model response time and UI responsiveness for healthcare professionals.</p>
               </div>
             </div>
           </div>
@@ -768,14 +730,13 @@ const Portfolio = () => {
                 Power Exchange Simulation
               </h3>
               <p style={{ ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-                Developed a peer-to-peer energy trading simulator designed to support over 1,000 households, achieving 85% local trade utilization. The platform leverages advanced algorithms, including Merge Sort for agent ranking (O(n log n)), Two-Pointer Matching for efficient trade pairing, and Dynamic Programming for optimizing trade schedules. Integrated SHA-256 for secure transaction verification, ensuring data integrity. The system processes trades in real-time, providing a scalable solution for decentralized energy markets, with a user-friendly interface to monitor trading metrics.
+                Designed a peer-to-peer energy trading simulator using Merge Sort, Two-Pointer Matching, and Dynamic Programming. Integrated SHA-256 for secure transactions and built a user-friendly interface.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
                 <span className="project-tag">Merge Sort</span>
                 <span className="project-tag">Two-Pointer Matching</span>
                 <span className="project-tag">Dynamic Programming</span>
                 <span className="project-tag">SHA-256</span>
-                <span className="project-tag">Algorithms</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
                 <ExternalLink color="#8b5cf6" size={20} style={{ cursor: 'pointer' }} />
@@ -786,14 +747,13 @@ const Portfolio = () => {
                 Bus Tracking System
               </h3>
               <p style={{ ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-                Built a dynamic MERN stack application to revolutionize urban transportation by providing real-time bus route monitoring and transparent fare information. Utilized MongoDB for storing route and schedule data, Express and Node.js for a robust backend API, and React for an interactive frontend with live updates. Implemented GPS integration for accurate bus tracking and optimized API calls to reduce latency by 20%. The system supports thousands of daily users, improving commuter experience with reliable schedules and fare transparency, and includes an admin dashboard for route management.
+                Built a MERN stack application for real-time bus tracking and fare transparency using MongoDB, Express, Node.js, and React. Integrated GPS for accurate monitoring.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
                 <span className="project-tag">MongoDB</span>
                 <span className="project-tag">Express</span>
                 <span className="project-tag">React</span>
                 <span className="project-tag">Node.js</span>
-                <span className="project-tag">Full Stack</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
                 <ExternalLink color="#8b5cf6" size={20} style={{ cursor: 'pointer' }} />
@@ -804,12 +764,11 @@ const Portfolio = () => {
                 Image Editor
               </h3>
               <p style={{ ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-                Created a Python-based image editing application using the Kivy framework, enabling users to perform seamless image manipulations through an intuitive cross-platform interface. Features include cropping, resizing, applying filters, and adjusting brightness/contrast, with an average session efficiency of 10 minutes. Optimized image processing algorithms to reduce rendering time by 15% and implemented a modular codebase for easy feature expansion. The application supports multiple image formats and includes undo/redo functionality, catering to both casual and advanced users.
+                Developed a Python-based image editor using Kivy for cross-platform functionality, enabling cropping, resizing, and filtering with an intuitive interface.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
                 <span className="project-tag">Python</span>
                 <span className="project-tag">Kivy</span>
-                <span className="project-tag">Python</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
                 <ExternalLink color="#8b5cf6" size={20} style={{ cursor: 'pointer' }} />
@@ -918,6 +877,8 @@ const Portfolio = () => {
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '3rem' }}>
               <a
                 href="mailto:karthikeyanav2003@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: '1rem', ...styles.textAccent, textDecoration: 'none', fontSize: '1.1rem' }}
                 className="social-hover"
               >
@@ -928,6 +889,8 @@ const Portfolio = () => {
             <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
               <a
                 href="https://github.com/karthikeyanav2003"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ ...styles.socialLink, backgroundColor: '#8b5cf6', padding: '1rem', borderRadius: '50%' }}
                 className="social-hover"
               >
@@ -935,6 +898,8 @@ const Portfolio = () => {
               </a>
               <a
                 href="https://www.linkedin.com/in/karthik-venkat-2219aa277"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ ...styles.socialLink, backgroundColor: '#8b5cf6', padding: '1rem', borderRadius: '50%' }}
                 className="social-hover"
               >
