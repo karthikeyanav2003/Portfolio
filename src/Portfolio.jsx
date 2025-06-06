@@ -57,7 +57,10 @@ const Portfolio = () => {
       }
 
       const contactElement = document.getElementById('contact');
-      if (contactElement && window.scrollY + window.innerHeight >= document.body.scrollHeight - 50) {
+      if (
+        contactElement &&
+        window.scrollY + window.innerHeight >= document.body.scrollHeight - 50
+      ) {
         currentSection = 'contact';
       }
 
@@ -162,7 +165,7 @@ const Portfolio = () => {
     },
     navLogo: {
       fontSize: '1.75rem',
-      fontWeight: '700',
+      fontWeight: 700,
       color: '#ffffff',
       textDecoration: 'none',
     },
@@ -190,7 +193,7 @@ const Portfolio = () => {
       color: '#ffffff',
       textDecoration: 'none',
       fontSize: '1rem',
-      fontWeight: '500',
+      fontWeight: 500,
       transition: 'color 0.3s ease, transform 0.2s ease',
       cursor: 'pointer',
       padding: windowWidth < 768 ? '0.75rem 0' : '0.5rem 0',
@@ -224,7 +227,7 @@ const Portfolio = () => {
       zIndex: 2,
       maxWidth: '800px',
       padding: '0 2rem',
-      marginTop: '40px',
+      marginTop: '2rem',
       animation: 'fadeInUp 1s ease-out',
     },
     heroPhoto: {
@@ -233,11 +236,11 @@ const Portfolio = () => {
       borderRadius: '50%',
       margin: '0 auto 2rem',
       border: '4px solid rgba(255, 255, 255, 0.2)',
-      boxShadow: '0 8px 32px rgba(139, 92, 246, 0.3)',
+      boxShadow: '0 8px 32px rgba(147, 51, 234, 0.3)',
       overflow: 'hidden',
       position: 'relative',
       background:
-        'linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(147, 51, 234, 0.3))',
+        'linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(147, 51, 234, 0.3))',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -249,10 +252,9 @@ const Portfolio = () => {
       borderRadius: '50%',
     },
     heroTitle: {
-      fontSize: 'clamp(3rem, 8vw, 6rem)',
-      fontWeight: '800',
-      background:
-        'linear-gradient(45deg, #ffffff, #f3e8ff, #d8b4fe)',
+      fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
+      fontWeight: 800,
+      background: 'linear-gradient(45deg, #ffffff, #f3e8ff, #d8b4fe)',
       backgroundClip: 'text',
       WebkitBackgroundClip: 'text',
       color: 'transparent',
@@ -263,7 +265,7 @@ const Portfolio = () => {
       fontSize: 'clamp(1.2rem, 3vw, 1.8rem)',
       color: '#ffffff',
       marginBottom: '1rem',
-      fontWeight: '400',
+      fontWeight: 400,
     },
     heroDescription: {
       fontSize: '1.2rem',
@@ -292,7 +294,7 @@ const Portfolio = () => {
       border: 'none',
       borderRadius: '50px',
       fontSize: '1.1rem',
-      fontWeight: '600',
+      fontWeight: 600,
       cursor: 'pointer',
       transition: 'all 0.3s ease',
       textDecoration: 'none',
@@ -306,7 +308,7 @@ const Portfolio = () => {
     },
     sectionTitle: {
       fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
-      fontWeight: '700',
+      fontWeight: 700,
       textAlign: 'center',
       marginBottom: '4rem',
       color: '#8b5cf6',
@@ -385,7 +387,7 @@ const Portfolio = () => {
       backgroundColor: '#121212',
     },
     bgSecondary: {
-      backgroundColor: 'rgba(31, 41, 55, 0.1)',
+      backgroundColor: 'rgba(31, 41, 55, 0.5)',
     },
     textPrimary: {
       color: '#ffffff',
@@ -530,11 +532,11 @@ const Portfolio = () => {
             Kaarthikeyan AV
           </a>
           <button
-            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             style={styles.mobileMenuButton}
             aria-label="Toggle navigation"
           >
-            <Menu size={28} />
+            <Menu size={24} />
           </button>
           {(windowWidth >= 768 || mobileMenuOpen) && (
             <div style={styles.navLinks} className="nav-links">
@@ -568,13 +570,13 @@ const Portfolio = () => {
 
       <section id="hero" style={styles.hero}>
         <div style={styles.heroContent}>
-          <div style={styles.heroPhoto} className="photo-hover hero-photo">
+          <div style={styles.heroPhoto} className="photo-hover">
             <img src={kaarthiPhoto} alt="Kaarthikeyan AV" style={styles.heroPhotoImg} />
           </div>
           <h1 style={styles.heroTitle}>Kaarthikeyan AV</h1>
           <p style={styles.heroSubtitle}>MSc Decision & Computing Sciences</p>
           <p style={styles.heroDescription}>
-            Passionate about bridging technology to bring innovative solutions to real-world problems
+            Passionate about bridging technology to bring innovative solutions to real-world problems.
           </p>
           <div style={styles.socialLinks}>
             <a
@@ -584,16 +586,16 @@ const Portfolio = () => {
               style={styles.socialLink}
               className="social-hover"
             >
-              <Github size={28} />
+              <Github size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/karthik-venkat-2219aa277"
+              href="https://www.linkedin.com/in/kaarthikeyan-a-v-2219aa277"
               target="_blank"
               rel="noopener noreferrer"
               style={styles.socialLink}
               className="social-hover"
             >
-              <Linkedin size={28} />
+              <Linkedin size={24} />
             </a>
             <a
               href="mailto:karthikeyanav2003@gmail.com"
@@ -602,7 +604,7 @@ const Portfolio = () => {
               style={styles.socialLink}
               className="social-hover"
             >
-              <Mail size={28} />
+              <Mail size={24} />
             </a>
           </div>
           <button
@@ -621,10 +623,10 @@ const Portfolio = () => {
           <div style={{ ...styles.grid, ...styles.gridTwoCol, alignItems: 'center' }}>
             <div style={{ ...styles.slideInLeft, ...(isVisible.about ? styles.slideInLeftVisible : {}) }}>
               <p style={{ fontSize: '1.2rem', marginBottom: '2rem', ...styles.textPrimary }}>
-                I am a dedicated technology enthusiast pursuing MSc in Decision & Computing Sciences at Coimbatore Institute of Technology. My passion lies in leveraging cutting-edge technologies to develop innovative solutions that address complex real-world challenges.
+                Dedicated technology enthusiast pursuing an MSc in Decision & Computing Sciences at Coimbatore Institute of Technology, focusing on innovative solutions for complex challenges.
               </p>
-              <p style={{ fontSize: '1.2rem', ...styles.textSecondary }}>
-                With hands-on experience in full-stack development and a strong foundation in algorithmic problem-solving, I specialize in creating scalable applications that make a meaningful impact across various domains.
+              <p style={{ fontSize: '1rem', ...styles.textSecondary }}>
+                Experienced in full-stack development with a strong foundation in algorithmic problem-solving, specializing in scalable applications that drive impact across various domains.
               </p>
             </div>
             <div
@@ -687,10 +689,10 @@ const Portfolio = () => {
                 </p>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', ...styles.textSecondary }}>
-                <p>· Web platform for chronic disease detection, improving diagnostic accessibility.</p>
-                <p>· Enables early detection, enhancing patient outcomes and workflows.</p>
-                <p>· Diabetic retinopathy detection tool for accurate diagnosis.</p>
-                <p>· Reduces manual screening, speeding up diagnosis for at-risk patients.</p>
+                <p>· Web platform for chronic disease detection, enhancing accessibility for healthcare professionals.</p>
+                <p>· Early detection system, improving patient outcomes and medical workflows.</p>
+                <p>· Diabetic retinopathy detection tool, ensuring accurate diagnosis of vision issues.</p>
+                <p>· Automated screening solution, accelerating diagnosis for at-risk patients.</p>
               </div>
             </div>
           </div>
@@ -720,7 +722,7 @@ const Portfolio = () => {
                 Women Empowerment Cell
               </p>
               <p style={styles.textSecondary}>
-                Orchestrated awareness-building events, coordinated self-defense classes, and served as editor for diverse media materials including posters, videos, and promotional content.
+                Orchestrated awareness-building events, coordinated self-defense classes, and edited diverse media materials, including posters, videos, and promotional content.
               </p>
             </div>
           </div>
@@ -736,8 +738,8 @@ const Portfolio = () => {
                 Power Exchange Simulation
               </h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-                <p>· Peer-to-peer energy trading simulator for secure, efficient exchange.</p>
-                <p>· Promotes sustainability in decentralized energy markets.</p>
+                <p>· Peer-to-peer energy trading simulator, enabling secure and efficient energy exchange.</p>
+                <p>· Decentralized energy distribution system, promoting sustainable market practices.</p>
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
                 <span className="project-tag">Merge Sort</span>
@@ -754,8 +756,8 @@ const Portfolio = () => {
                 Bus Tracking System
               </h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-                <p>· Real-time bus tracking app for location and fare transparency.</p>
-                <p>· Improves commuter experience and public transport reliability.</p>
+                <p>· Real-time bus tracking application, providing location and fare transparency.</p>
+                <p>· Public transport solution, improving reliability and user convenience.</p>
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
                 <span className="project-tag">MongoDB</span>
@@ -772,8 +774,8 @@ const Portfolio = () => {
                 Image Editor
               </h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-                <p>· Cross-platform app for cropping, resizing, and filtering images.</p>
-                <p>· Offers accessible, efficient image editing for users.</p>
+                <p>· Cross-platform image editing application, supporting cropping, resizing, and filtering.</p>
+                <p>· User-friendly tool, streamlining efficient image processing tasks.</p>
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
                 <span className="project-tag">Python</span>
@@ -792,7 +794,7 @@ const Portfolio = () => {
           <h2 style={styles.sectionTitle}>Technical Skills</h2>
           <div style={{ ...styles.grid, ...styles.gridFourCol, marginBottom: '4rem' }}>
             <div style={{ ...styles.card, textAlign: 'center' }} className="card-hover skill-card">
-              <Code className="skill-icon" color="#8b5cf6" size={48} style={{ marginBottom: '1rem' }} />
+              <Code className="skill-icon" color="#ffffff" size={50} style={{ marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.3rem', marginBottom: '1.5rem', ...styles.textAccent }}>
                 Languages & Frameworks
               </h3>
@@ -806,7 +808,7 @@ const Portfolio = () => {
               </div>
             </div>
             <div style={{ ...styles.card, textAlign: 'center' }} className="card-hover skill-card">
-              <Database className="skill-icon" color="#8b5cf6" size={48} style={{ marginBottom: '1rem' }} />
+              <Database className="skill-icon" color="#ffffff" size={50} style={{ marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.3rem', marginBottom: '1.5rem', ...styles.textAccent }}>
                 Databases
               </h3>
@@ -817,7 +819,7 @@ const Portfolio = () => {
               </div>
             </div>
             <div style={{ ...styles.card, textAlign: 'center' }} className="card-hover skill-card">
-              <Globe className="skill-icon" color="#8b5cf6" size={48} style={{ marginBottom: '1rem' }} />
+              <Globe className="skill-icon" color="#ffffff" size={50} style={{ marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.3rem', marginBottom: '1.5rem', ...styles.textAccent }}>
                 Web Technologies
               </h3>
@@ -829,7 +831,7 @@ const Portfolio = () => {
               </div>
             </div>
             <div style={{ ...styles.card, textAlign: 'center' }} className="card-hover skill-card">
-              <Smartphone className="skill-icon" color="#8b5cf6" size={48} style={{ marginBottom: '1rem' }} />
+              <Smartphone className="skill-icon" color="#ffffff" size={50} style={{ marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.3rem', marginBottom: '1.5rem', ...styles.textAccent }}>
                 Tools & Analytics
               </h3>
@@ -852,11 +854,11 @@ const Portfolio = () => {
                 MSc Decision & Computing Sciences (Integrated)
               </h3>
               <p style={{ fontSize: '1.3rem', marginBottom: '2rem', ...styles.textPrimary }}>
-                Coimbatore Institute of Technology, Coimbatore
+                Coimbatore Institute of Technology, India
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', ...styles.textSecondary }}>
-                <p><strong>Duration:</strong> 2021 - 2026</p>
-                <p><strong>CGPA:</strong> 7.37/10 (Until 7th Semester)</p>
+                <p><strong>Duration:</strong> 2020 - 2025</p>
+                <p><strong>CGPA:</strong> 7.37/10</p>
               </div>
             </div>
             <div style={styles.card} className="card-hover">
@@ -864,11 +866,11 @@ const Portfolio = () => {
                 Higher Secondary School
               </h3>
               <p style={{ fontSize: '1.3rem', marginBottom: '2rem', ...styles.textPrimary }}>
-                Bharathi Vidhya Bhavan, Thindal, Erode
+                Bharathi Vidhya Bhavan, Erode, India
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', ...styles.textSecondary }}>
-                <p><strong>Year of Completion:</strong> 2021</p>
-                <p><strong>Percentage:</strong> 91%</p>
+                <p><strong>Year of Completion:</strong> 2020</p>
+                <p><strong>Percentage:</strong> 92%</p>
               </div>
             </div>
           </div>
@@ -880,8 +882,7 @@ const Portfolio = () => {
           <h2 style={styles.sectionTitle}>Get In Touch</h2>
           <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
             <p style={{ fontSize: '1.2rem', ...styles.textSecondary, marginBottom: '3rem' }}>
-              I'm always interested in discussing new opportunities and innovative projects.
-              Let's connect and explore how we can work together to create meaningful solutions.
+              Always open to discussing new opportunities and innovative projects. Connect to explore collaborative solutions.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '3rem' }}>
               <a
@@ -906,7 +907,7 @@ const Portfolio = () => {
                 <Github size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/kaarthikeyan-a-v-2219aa277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                href="https://www.linkedin.com/in/kaarthikeyan-a-v-2219aa277"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ ...styles.socialLink, backgroundColor: '#8b5cf6', padding: '1rem', borderRadius: '50%' }}
