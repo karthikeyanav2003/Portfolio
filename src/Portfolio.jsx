@@ -473,16 +473,21 @@ const Portfolio = () => {
     }
 
     .project-tag {
-      background: inline-block;
-      background: rgba(139, 92, 246, 0.6);
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.8), rgba(147, 51, 234, 0.6));
       color: #ffffff;
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
       font-weight: 500;
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
       display: inline-block;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .project-tag:hover {
+      transform: scale(1.05);
     }
 
     .skill-icon {
@@ -681,10 +686,11 @@ const Portfolio = () => {
                   Prediscan Med Tech
                 </p>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', ...styles.textSecondary }}>
-                <p>Developed and deployed a chronic disease detection platform using Streamlit to enhance diagnostic accessibility.</p>
-                <p>Engineered a diabetic retinopathy detection platform with Flask and Django for flexible deployment.</p>
-                <p>Refactored project architecture to optimize model response time and UI responsiveness for healthcare professionals.</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', ...styles.textSecondary }}>
+                <p>· Web platform for chronic disease detection, improving diagnostic accessibility.</p>
+                <p>· Enables early detection, enhancing patient outcomes and workflows.</p>
+                <p>· Diabetic retinopathy detection tool for accurate diagnosis.</p>
+                <p>· Reduces manual screening, speeding up diagnosis for at-risk patients.</p>
               </div>
             </div>
           </div>
@@ -729,9 +735,10 @@ const Portfolio = () => {
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', ...styles.textAccent }}>
                 Power Exchange Simulation
               </h3>
-              <p style={{ ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-                Designed a peer-to-peer energy trading simulator using Merge Sort, Two-Pointer Matching, and Dynamic Programming. Integrated SHA-256 for secure transactions and built a user-friendly interface.
-              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
+                <p>· Peer-to-peer energy trading simulator for secure, efficient exchange.</p>
+                <p>· Promotes sustainability in decentralized energy markets.</p>
+              </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
                 <span className="project-tag">Merge Sort</span>
                 <span className="project-tag">Two-Pointer Matching</span>
@@ -746,9 +753,10 @@ const Portfolio = () => {
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', ...styles.textAccent }}>
                 Bus Tracking System
               </h3>
-              <p style={{ ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-                Built a MERN stack application for real-time bus tracking and fare transparency using MongoDB, Express, Node.js, and React. Integrated GPS for accurate monitoring.
-              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
+                <p>· Real-time bus tracking app for location and fare transparency.</p>
+                <p>· Improves commuter experience and public transport reliability.</p>
+              </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
                 <span className="project-tag">MongoDB</span>
                 <span className="project-tag">Express</span>
@@ -763,9 +771,10 @@ const Portfolio = () => {
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', ...styles.textAccent }}>
                 Image Editor
               </h3>
-              <p style={{ ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-                Developed a Python-based image editor using Kivy for cross-platform functionality, enabling cropping, resizing, and filtering with an intuitive interface.
-              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', ...styles.textSecondary, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
+                <p>· Cross-platform app for cropping, resizing, and filtering images.</p>
+                <p>· Offers accessible, efficient image editing for users.</p>
+              </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.5rem' }}>
                 <span className="project-tag">Python</span>
                 <span className="project-tag">Kivy</span>
@@ -897,7 +906,7 @@ const Portfolio = () => {
                 <Github size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/karthik-venkat-2219aa277"
+                href="https://www.linkedin.com/in/kaarthikeyan-a-v-2219aa277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ ...styles.socialLink, backgroundColor: '#8b5cf6', padding: '1rem', borderRadius: '50%' }}
