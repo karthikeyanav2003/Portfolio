@@ -92,47 +92,6 @@ const Portfolio = () => {
     setMobileMenuOpen(false);
   };
 
-  const handleResumeDownload = (e) => {
-    e.preventDefault();
-    const link = '/resume.pdf';
-    fetch(link, {
-      method: 'GET',
-      headers: {
-        Accept: 'application/pdf',
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error ${response.status}: ${response.statusText}`);
-        }
-        const contentType = response.headers.get('content-type');
-        if (!contentType || !contentType.includes('application/pdf')) {
-          throw new Error(`Invalid content type: ${contentType}`);
-        }
-        return response.blob();
-      })
-      .then((blob) => {
-        if (blob.size === 0) {
-          throw new Error('Downloaded file is empty');
-        }
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'Kaarthikeyan_AV_Resume.pdf';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        window.URL.revokeObjectURL(url);
-      })
-      .catch((error) => {
-        console.error('Download error:', error);
-        alert(
-          `Failed to download resume: ${error.message}. Please try again or contact me at karthikeyanav2003@gmail.com. Alternatively, you can download it directly from /resume.pdf.`
-        );
-        window.location.href = link;
-      });
-  };
-
   const styles = {
     body: {
       fontFamily:
@@ -478,7 +437,7 @@ const Portfolio = () => {
       background: linear-gradient(135deg, rgba(139, 92, 246, 0.8), rgba(147, 51, 234, 0.6));
       color: #ffffff;
       padding: 0.3rem 0.9rem;
-      border-radius: 50px;
+      borderRadius: 50px;
       font-size: 0.8rem;
       font-weight: 500;
       margin-right: 0.5rem;
@@ -655,7 +614,7 @@ const Portfolio = () => {
                 </div>
                 <a
                   href="/resume.pdf"
-                  onClick={handleResumeDownload}
+                  download="Kaarthikeyan_AV_Resume.pdf"
                   style={{
                     ...styles.ctaButton,
                     marginTop: '1.5rem',
