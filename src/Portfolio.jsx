@@ -838,7 +838,7 @@ const Portfolio = () => {
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', ...styles.textSecondary }}>
                 <p><strong>Duration:</strong> 2020 - 2025</p>
-                <p><strong>CGPA:</strong> 7.37/10</p>
+                <p><strong>CGPA:</strong> 7.38/10</p>
               </div>
             </div>
             <div style={styles.card} className="card-hover">
